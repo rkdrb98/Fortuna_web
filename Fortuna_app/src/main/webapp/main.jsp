@@ -63,7 +63,7 @@
 			</nav>
 
 		</div>
-		<video class="video" id="src.mp4" autoplay controls loop></video>
+		<video class="video" id="src.mp4" muted="muted" autoplay controls loop></video>
 
 		<!--<canvas class="video_container" width=2000 height=2000 onclick="action_coords(event)"></canvas>-->
 		<canvas class="line_container" width=1200 height=580
@@ -84,7 +84,7 @@
 					</li>
 					<li id="list_01" class="depth_0">
 						<div class="label">
-							<button class="btn">개 발 중</button>
+							<button class="btn" onclick="bird_eye_view()">버드아이뷰</button>
 
 						</div>
 					</li>
@@ -113,11 +113,17 @@
 	const canvas = document.querySelector('.line_container');
 	const ctx = canvas.getContext("2d");
 	var arr1= new Array();
+	var videonum = 0;
+	var video = document.getElementById("src.mp4");
+	var b_video = document.getElementById("src.mp4");
 	
 	function playVid1() {
-
-		var video = document.getElementById("src.mp4");
+		const time = b_video.currentTime;
+		videonum =1;
 		video.src = './CCTV_Video/test/test1.mp4';
+		
+		video.currentTime = time;
+		console.log(video.currentTime);
 		video.load();
 		video.play();
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -125,12 +131,13 @@
 		draw();
 	}
 	function playVid2() {
-		ctx.clearRect(0, 0, canvas.width, canvas.height);
-		var video = document.getElementById("src.mp4");
+		const time = b_video.currentTime;
+		videonum =2;
 		video.src = './CCTV_Video/test/test2.mp4';
+		video.currentTime = time;
 		video.load();
 		video.play();
-		
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		$.ajax({
 		    url: 'coordinatesTest.csv',
 		    dataType: 'text',
@@ -139,8 +146,7 @@
 		draw();
 	}
 	function playVid3() {
-
-		var video = document.getElementById("src.mp4");
+		videonum =3;
 		video.src = './CCTV_Video/CTV0002/CTV0002_20220530.230900.000.mp4';
 		video.load();
 		video.play();
@@ -150,7 +156,7 @@
 	}
 
 	function playVid4() {
-		var video = document.getElementById("src.mp4");
+		videonum =4;
 		video.src = './CCTV_Video/CTV0009/CTV0009_20220518.052730.000.mp4';
 		video.load();
 		video.play();
@@ -159,12 +165,33 @@
 	}
 
 	function playVid5() {
+		videonum =5;
 		ctx.clearRect(0, 0, canvas.width, canvas.height);	
-		var video = document.getElementById("src.mp4");
 		video.src = './CCTV_Video/CTV0032/CTV0032_20220518.022630.000.mp4';
 		video.load();
 		video.play();
 
+	}
+	
+	function bird_eye_view(){
+		const time = video.currentTime;
+		if(videonum==1){
+			b_video.src = './CCTV_Video/test3.mp4';
+			b_video.currentTime = time;
+			console.log(b_video.currentTime);
+			ctx.clearRect(0, 0, canvas.width, canvas.height);	
+			b_video.load();
+			b_video.play();
+		}else if(videonum==2){
+			b_video.src = './CCTV_Video/test4.mp4';
+			b_video.currentTime = time;
+			console.log(b_video.currentTime);
+			ctx.clearRect(0, 0, canvas.width, canvas.height);	
+			b_video.load();
+			b_video.play();
+		}
+		
+		
 	}
 
 	function clear_canvas() {

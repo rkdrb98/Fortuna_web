@@ -13,7 +13,7 @@ public class inquiryDAO {
 
 	public inquiryDAO() {
 		try {
-			String dbURL = "jdbc:mariadb://rkdrb0070.cafe24.com/rkdrb0070";
+			String dbURL = "jdbc:mariadb://localhost:3306/rkdrb0070";
 			String dbID = "rkdrb0070";
 			String dbPassword = "Krkdrb0070";
 			Class.forName("org.mariadb.jdbc.Driver");
