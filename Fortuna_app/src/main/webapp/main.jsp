@@ -84,7 +84,7 @@
 					</li>
 					<li id="list_01" class="depth_0">
 						<div class="label">
-							<button class="btn" onclick="bird_eye_view()">버드아이뷰</button>
+							<button class="btn" onclick="window.open('popup.jsp','test','width=400, height=400')">버드아이뷰</button>
 
 						</div>
 					</li>
@@ -192,6 +192,15 @@
 		
 		
 	}
+	
+	
+	
+	function openWindowPop(url,name){
+		var options = 'top10=10,left=10,width=500, height=600, status=no, menubar=no, toolbar=no, resizable=no';
+		window.open(url,name,options);
+	}
+	
+	
 
 	function clear_canvas() {
 
@@ -391,6 +400,9 @@
 
 		document.getElementById("coordinate").innerHTML = coords;
 	}
+	
+
+	
 </script>
 
 
