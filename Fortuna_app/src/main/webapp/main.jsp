@@ -120,7 +120,7 @@
 	function playVid1() {
 		const time = b_video.currentTime;
 		videonum =1;
-		video.src = './CCTV_Video/test/test5.mp4';
+		video.src = './CCTV_Video/test/test1.mp4';
 		video.currentTime = time;
 		console.log(video.currentTime);
 		video.load();
@@ -132,13 +132,13 @@
 	function playVid2() {
 		const time = b_video.currentTime;
 		videonum =2;
-		video.src = './CCTV_Video/test/test2.mp4';
+		video.src = './CCTV_Video/test/test5.mp4';
 		video.currentTime = time;
 		video.load();
 		video.play();
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 		$.ajax({
-		    url: 'coordinatesTest.csv',
+		    url: ' ',
 		    dataType: 'text',
 		  }).done(successFunction);
 		ctx.beginPath();
