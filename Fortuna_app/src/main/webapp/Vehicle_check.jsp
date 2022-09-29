@@ -99,13 +99,13 @@ th {
 			<%
 			if (pageNumber != 1) {
 			%>
-			<a href="Inquiry.jsp?pageNumber=<%=pageNumber - 1%>"
+			<a href="Vehicle_check.jsp?pageNumber=<%=pageNumber - 1%>"
 				class="btn btn-success btn-arraw-left">이전</a>
 			<%
 			}
 			if (InquiryDAO.nextPage(pageNumber + 1)) {
 			%>
-			<a href="Inquiry.jsp?pageNumber=<%=pageNumber + 1%>"
+			<a href="Vehicle_check.jsp?pageNumber=<%=pageNumber + 1%>"
 				class="btn btn-success btn-arraw-left">다음</a>
 			<%
 			}
