@@ -120,8 +120,7 @@
 	function playVid1() {
 		const time = b_video.currentTime;
 		videonum =1;
-		video.src = './CCTV_Video/test/test1.mp4';
-		
+		video.src = './CCTV_Video/test/test5.mp4';
 		video.currentTime = time;
 		console.log(video.currentTime);
 		video.load();
