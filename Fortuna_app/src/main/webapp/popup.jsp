@@ -13,33 +13,34 @@ video {
 	height: 400px;
 }
 </style>
-
+<script src="http://code.jquery.com/jquery-latest.js"></script>
 
 <body>
 
-	<video class="video" id="src.mp4" muted="muted" autoplay controls loop></video>
-
-	<script>
-	var bird = new bird_eye_view();
-		/*opener.location.href = "javascript:bird_eye_view()"*/
+	<video class="video" id="src2.mp4" muted="muted" autoplay controls loop></video>
 	
+</body>
+	<script>
+		var bird = new bird_eye_view();
+		/*opener.location.href = "javascript:bird_eye_view()"*/
 
-
-		var b_video = document.getElementById("src.mp4");
 		function bird_eye_view() {
 			const time = opener.video.currentTime;
 			if (opener.videonum == 1) {
+				var b_video = document.getElementById("src2.mp4");
 				b_video.src = './CCTV_Video/test3.mp4';
-				b_video.currentTime = time;
+				b_video.currentTime = opener.video.currentTime;
 				console.log(b_video.currentTime);
-				ctx.clearRect(0, 0, canvas.width, canvas.height);
+				
 				b_video.load();
 				b_video.play();
 			} else if (opener.videonum == 2) {
-				b_video.src = './CCTV_Video/test3.mp4';
+				var b_video = document.getElementById("src2.mp4");
+				console.log(open.videonum);
+				b_video.src = './CCTV_Video/gumi_bird_eye_view.mp4';
 				b_video.currentTime = time;
 				console.log(b_video.currentTime);
-				ctx.clearRect(0, 0, canvas.width, canvas.height);
+				
 				b_video.load();
 				b_video.play();
 			}
@@ -48,8 +49,4 @@ video {
 	</script>
 
 
-
-
-
-</body>
 </html>
