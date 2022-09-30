@@ -84,7 +84,8 @@
 					</li>
 					<li id="list_01" class="depth_0">
 						<div class="label">
-							<button class="btn" onclick="window.open('popup.jsp','test','width=400, height=400')">¹öµå¾ÆÀÌºä</button>
+							<button class="btn"
+								onclick="window.open('popup.jsp','test','width=400, height=400')">¹öµå¾ÆÀÌºä</button>
 
 						</div>
 					</li>
@@ -115,7 +116,7 @@
 	var arr1= new Array();
 	var videonum = 0;
 	var video = document.getElementById("src.mp4");
-	var b_video = document.getElementById("src.mp4");
+	
 	
 	function playVid1() {
 		const time = b_video.currentTime;
@@ -130,17 +131,17 @@
 		draw();
 	}
 	function playVid2() {
-		const time = b_video.currentTime;
+		/*const time = b_video.currentTime;*/
 		videonum =2;
 		video.src = './CCTV_Video/test/test5.mp4';
-		video.currentTime = time;
+		/*video.currentTime = time;*/
 		video.load();
 		video.play();
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
-		$.ajax({
+		/*$.ajax({
 		    url: ' ',
 		    dataType: 'text',
-		  }).done(successFunction);
+		  }).done(successFunction);*/
 		ctx.beginPath();
 		draw();
 	}
@@ -172,26 +173,7 @@
 
 	}
 	
-	function bird_eye_view(){
-		const time = video.currentTime;
-		if(videonum==1){
-			b_video.src = './CCTV_Video/test3.mp4';
-			b_video.currentTime = time;
-			console.log(b_video.currentTime);
-			ctx.clearRect(0, 0, canvas.width, canvas.height);	
-			b_video.load();
-			b_video.play();
-		}else if(videonum==2){
-			b_video.src = './CCTV_Video/test4.mp4';
-			b_video.currentTime = time;
-			console.log(b_video.currentTime);
-			ctx.clearRect(0, 0, canvas.width, canvas.height);	
-			b_video.load();
-			b_video.play();
-		}
-		
-		
-	}
+
 	
 	
 	
