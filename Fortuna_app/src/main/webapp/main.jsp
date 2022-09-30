@@ -85,7 +85,7 @@
 					<li id="list_01" class="depth_0">
 						<div class="label">
 							<button class="btn"
-								onclick="window.open('popup.jsp','test','width=400, height=400')">¹öµå¾ÆÀÌºä</button>
+								onclick="window.open('popup.jsp','test','width=960, height=540')">¹öµå¾ÆÀÌºä</button>
 
 						</div>
 					</li>
@@ -119,10 +119,10 @@
 	
 	
 	function playVid1() {
-		const time = b_video.currentTime;
+		
 		videonum =1;
-		video.src = './CCTV_Video/test/test1.mp4';
-		video.currentTime = time;
+		video.src = './CCTV_Video/original/daegu_original.mp4';
+		
 		console.log(video.currentTime);
 		video.load();
 		video.play();
@@ -133,7 +133,7 @@
 	function playVid2() {
 		/*const time = b_video.currentTime;*/
 		videonum =2;
-		video.src = './CCTV_Video/test/test5.mp4';
+		video.src = './CCTV_Video/original/gumi_original.mp4';
 		/*video.currentTime = time;*/
 		video.load();
 		video.play();
