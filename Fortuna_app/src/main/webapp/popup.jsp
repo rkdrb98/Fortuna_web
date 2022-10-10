@@ -20,7 +20,7 @@ video {
 
 <body>
 
-	<video class="video" id="src2.mp4" muted="muted" autoplay controls loop></video>
+	<video class="video" id="src2.mp4" muted="muted" width="500px" autoplay controls loop></video>
 
 </body>
 <script>

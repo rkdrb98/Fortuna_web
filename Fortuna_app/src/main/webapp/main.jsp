@@ -85,7 +85,7 @@
 					<li id="list_01" class="depth_0">
 						<div class="label">
 							<button class="btn"
-								onclick="window.open('popup.jsp','test','width=960, height=540')">버드아이뷰</button>
+								onclick="window.open('popup.jsp','test','width=500, height=280')">버드아이뷰</button>
 
 						</div>
 					</li>
