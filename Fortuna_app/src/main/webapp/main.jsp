@@ -68,7 +68,12 @@
 
 						</div>
 					</li>
+					<li id="list_01" class="depth_0">
+						<div class="label">
+							<button class="btn" onclick="playVid8()">속도테스트6</button>
 
+						</div>
+					</li>
 
 				</ol>
 
@@ -186,7 +191,7 @@
 	}
 	
 	function playVid6() {
-		videonum =5;
+		videonum =6;
 		ctx.clearRect(0, 0, canvas.width, canvas.height);	
 		video.src = './CCTV_Video/original/85.mp4';
 		video.load();
@@ -195,13 +200,23 @@
 	}
 	
 	function playVid7() {
-		videonum =5;
+		videonum =7;
 		ctx.clearRect(0, 0, canvas.width, canvas.height);	
 		video.src = './CCTV_Video/original/110_120.mp4';
 		video.load();
 		video.play();
 
 	}
+	
+	function playVid8() {
+		videonum =8;
+		ctx.clearRect(0, 0, canvas.width, canvas.height);	
+		video.src = './CCTV_Video/original/lane_change.mp4';
+		video.load();
+		video.play();
+
+	}
+	
 	
 	
 
