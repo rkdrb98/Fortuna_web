@@ -40,19 +40,31 @@
 					</li>
 					<li id="list_01" class="depth_0">
 						<div class="label">
-							<button class="btn" onclick="playVid3()">중앙로네거리</button>
+							<button class="btn" onclick="playVid3()">속도테스트1</button>
 
 						</div>
 					</li>
 					<li id="list_01" class="depth_0">
 						<div class="label">
-							<button class="btn" onclick="playVid4()">안골네거리</button>
+							<button class="btn" onclick="playVid4()">속도테스트2</button>
 
 						</div>
 					</li>
 					<li id="list_01" class="depth_0">
 						<div class="label">
-							<button class="btn" onclick="playVid5()">성남네거리</button>
+							<button class="btn" onclick="playVid5()">속도테스트3</button>
+
+						</div>
+					</li>
+					<li id="list_01" class="depth_0">
+						<div class="label">
+							<button class="btn" onclick="playVid6()">속도테스트4</button>
+
+						</div>
+					</li>
+					<li id="list_01" class="depth_0">
+						<div class="label">
+							<button class="btn" onclick="playVid7()">속도테스트5</button>
 
 						</div>
 					</li>
@@ -85,7 +97,7 @@
 					<li id="list_01" class="depth_0">
 						<div class="label">
 							<button class="btn"
-								onclick="window.open('popup.jsp','test','width=500, height=280')">버드아이뷰</button>
+								onclick="window.open('popup.jsp','test','width=500, height=280, top=500, left=1600')">버드아이뷰</button>
 
 						</div>
 					</li>
@@ -147,7 +159,7 @@
 	}
 	function playVid3() {
 		videonum =3;
-		video.src = './CCTV_Video/CTV0002/CTV0002_20220530.230900.000.mp4';
+		video.src = './CCTV_Video/original/30.mp4';
 		video.load();
 		video.play();
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -157,7 +169,7 @@
 
 	function playVid4() {
 		videonum =4;
-		video.src = './CCTV_Video/CTV0009/CTV0009_20220518.052730.000.mp4';
+		video.src = './CCTV_Video/original/50_90.mp4';
 		video.load();
 		video.play();
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -167,11 +179,30 @@
 	function playVid5() {
 		videonum =5;
 		ctx.clearRect(0, 0, canvas.width, canvas.height);	
-		video.src = './CCTV_Video/CTV0032/CTV0032_20220518.022630.000.mp4';
+		video.src = './CCTV_Video/original/70.mp4';
 		video.load();
 		video.play();
 
 	}
+	
+	function playVid6() {
+		videonum =5;
+		ctx.clearRect(0, 0, canvas.width, canvas.height);	
+		video.src = './CCTV_Video/original/85.mp4';
+		video.load();
+		video.play();
+
+	}
+	
+	function playVid7() {
+		videonum =5;
+		ctx.clearRect(0, 0, canvas.width, canvas.height);	
+		video.src = './CCTV_Video/original/110_120.mp4';
+		video.load();
+		video.play();
+
+	}
+	
 	
 
 	
